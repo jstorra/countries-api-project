@@ -135,22 +135,26 @@ img {
 }
 
 /* MODALS */
-.swal2-popup {
+.swal2-container {
+    min-width: 380px;
+}
+.swal2-popup.swal2-show.swal2-modal {
     padding: 10px;
     border-radius: 20px;
-    height: 450px;
-    display: grid;
-    grid-template-rows: 2fr auto;
+    max-height: 550px;
+    height: fit-content;
+    display: flex !important;
+    flex-direction: column;
 }
 #swal2-html-container {
     margin: 0;
-    height: 100%;
+    height: fit-content;
 }
 
 .m-country-img {
     border-radius: 20px;
     overflow: hidden;
-    height: 50%;
+    height: 200px;
     width: 100%;
 }
 .m-country-img img{
