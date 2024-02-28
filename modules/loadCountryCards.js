@@ -1,6 +1,5 @@
 export const loadCountryCards = (data) => {
     const main = document.querySelector('main');
-
     const paises = data.map(pais =>
         `<article class="card-country">
             <figure class="img-country">

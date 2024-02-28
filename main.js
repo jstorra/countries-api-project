@@ -6,8 +6,7 @@ import { loadCountryModals } from './modules/loadModals.js';
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const {data, api} = await getData();
-        console.log(data);
-        inputFilter(data);
+        inputFilter(data, api);
         loadCountryCards(data);
         await loadCountryModals(api);
     } catch (error) {

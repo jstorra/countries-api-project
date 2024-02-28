@@ -4,7 +4,8 @@ export const loadCountryModals = async (api) => {
     cards.forEach(card => {
         card.addEventListener('click', async () => {
             const name = card.querySelector('h3');
-            const country = (await (await fetch(api.replace('/all', `/name/${name.textContent}`))).json())[0];
+            const country = (await (await fetch(api.replace('/all', `/name/${name.textContent}?fullText=true`))).json())[0];
+            let maps = country.maps.openStreetMaps || country.maps.googleMaps
 
             let currenciesHTML = '';
             for (const currency in country.currencies) {
@@ -25,7 +26,9 @@ export const loadCountryModals = async (api) => {
                     <p class="m-currencies">Currency: ${currenciesHTML}</p>
                     <p>Capital: <span class="m-capital">${country.capital}</span></p>
                     <p class="m-languages">Languages: ${languagesHTML}</p>
-                    <p class="m-location">Location: <a href="${country.maps.openStreetMaps || country.maps.googleMaps}" target="_blank" rel="noopener">Go Maps</a></p>
+                    <p class="m-location">Location: <a href="${
+                        maps.includes('https://') ? maps : 'https://' + maps
+                    }" target="_blank" rel="noopener">Go Maps</a></p>
                 `
             });
         })
