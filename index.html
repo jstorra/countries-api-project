@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>COUNTRIES</h1>
+    <div class="filtro-bar">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+            </svg>
+        </div>
+        <input type="text" class="inputFilter" placeholder="Search" />
+        <select name="" id="selectFilter">
+            <option value="" selected></option>
+            <option value="currency">Currency</option>
+            <option value="country">Country</option>
+        </select>
+    </div>
+    <main></main>
+    <footer>
+        <p>
+            Developed by
+            <a href="https://github.com/jstorra" target="_blank" rel="noopener">@jstorra</a>
+        </p>
+    </footer>
+</body>
+
+</html>

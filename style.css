@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #020617;
+    --bg-card-color: #0f172a;
+    --title-color: #fff;
+    --text-color: rgb(148, 163, 184);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-width: 400px;
+    font-family: "Onest", sans-serif;
+    padding: 50px 0;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--title-color);
+    font-size: 6rem;
+    margin: 0 auto 30px;
+    width: fit-content;
+}
+
+.filtro-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.icon-container {
+    background-color: var(--bg-card-color);
+    border: 1px solid var(--text-color);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtro-bar .icon {
+    color: var(--text-color);
+}
+.filtro-bar input {
+    display: block;
+    width: 50%;
+    background-color: var(--bg-card-color);
+    outline: none;
+    border: 1px solid var(--text-color);
+    border-right: none;
+    border-left: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+.filtro-bar select {
+    display: block;
+    outline: none;
+    border: 1px solid var(--text-color);
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background: linear-gradient(
+        0deg,
+        rgba(148, 163, 184, 0.703016241299304) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+main {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card-country {
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    height: 250px;
+    max-width: 300px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+.card-country:hover {
+    scale: 1.02;
+    box-shadow: var(--text-color) 0px 0px 50px 10px;
+}
+
+.img-country {
+    height: 80%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.name-country {
+    height: 20%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        var(--bg-card-color) 80%,
+        rgba(148, 163, 184, 0.3)
+    );
+    border-top: 1px solid var(--text-color);
+    border-radius: 0 0 20px 20px;
+    white-space: nowrap;
+}
+.name-country h3 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+}
+
+/* MODALS */
+.swal2-popup {
+    padding: 10px;
+    border-radius: 20px;
+    height: 450px;
+    display: grid;
+    grid-template-rows: 2fr auto;
+}
+#swal2-html-container {
+    margin: 0;
+    height: 100%;
+}
+
+.m-country-img {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 50%;
+    width: 100%;
+}
+.m-country-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.m-countryName {
+    font-size: 3.8rem;
+    margin-bottom: 10px;
+}
+#swal2-html-container p {
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px;
+}
+#swal2-html-container span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 3px;
+}
+.m-currency, .m-capital, .m-language {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px;
+}
+.m-currency {
+    background-color: orange;
+}
+.m-capital {
+    background-color: greenyellow;
+}
+.m-language {
+    background-color: violet;
+}
+.m-location a {
+    color: blue;
+}
+
+.swal2-confirm.swal2-styled {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--title-color);
+}
+footer p {
+    font-size: 1.5rem;
+}
+footer a {
+    text-decoration: none;
+    color: #0284c7;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
